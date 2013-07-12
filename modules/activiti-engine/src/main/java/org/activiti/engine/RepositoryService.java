@@ -352,5 +352,14 @@ public interface RepositoryService {
    * is authorized for a certain process definition
    */
   List<IdentityLink> getIdentityLinksForProcessDefinition(String processDefinitionId);
+  
+  /**
+   * Update the process definition version in the given process instance
+   * @param processInstanceId id of the process instance, cannot be null.
+   * @param processDefinitionVersion version of the process definition, cannot be null.
+   * @throws ActivitiIllegalArgumentException when the process definition version or process instance id doesn't exist.
+   * @throws ActivitiException when the process definition does not contain the current activity of process instance.
+   */
+  void updateProcessDefinitionVersion(String processInstanceId, Integer processDefinitionVersion);
 
 }
