@@ -8,7 +8,7 @@
   <artifactId>activiti-root</artifactId>
 
   <packaging>pom</packaging>
-  <version>5.13.1-MODIFIED</version>
+  <version>5.13.2-MODIFIED</version>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <spring.framework.version>3.1.2.RELEASE</spring.framework.version>
@@ -97,9 +97,9 @@
         <version>1.1.1</version>
       </dependency>
       <dependency>
-        <groupId>commons-lang</groupId>
-        <artifactId>commons-lang</artifactId>
-        <version>2.4</version>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>3.1</version>
       </dependency>
       <dependency>
         <groupId>commons-io</groupId>
@@ -293,12 +293,12 @@
       <dependency>
         <groupId>org.drools</groupId>
         <artifactId>drools-core</artifactId>
-        <version>5.4.0.Final</version>
+        <version>5.5.0.Final</version>
       </dependency>
       <dependency>
         <groupId>org.drools</groupId>
         <artifactId>drools-compiler</artifactId>
-        <version>5.4.0.Final</version>
+        <version>5.5.0.Final</version>
       </dependency>
       <dependency>
         <groupId>org.json</groupId>
@@ -695,10 +695,17 @@
         <module>modules/activiti-common-rest</module>
         <module>modules/activiti-modeler</module>
         <module>modules/activiti-diagram-rest</module>
+        <module>modules/activiti-explorer</module>
+        <module>modules/activiti-webapp-explorer2</module>
+        <module>modules/activiti-rest</module>
+        <module>modules/activiti-webapp-rest2</module>
         <module>modules/activiti-spring</module>
         <module>modules/activiti-cxf</module>
+        <module>modules/activiti-mule</module>
+        <module>modules/activiti-camel</module>
         <module>modules/activiti-cdi</module>
-
+        <module>modules/activiti-osgi</module>
+        <module>modules/activiti-ldap</module>
       </modules>
       <build>
         <plugins>
@@ -876,19 +883,19 @@
     </profile>
   </profiles>
   
-	<distributionManagement>
-		<repository>
-			<id>releases</id>
-			<name>Internal Releases</name>
-			<url>http://192.168.0.6:8080/nexus/content/repositories/releases</url>
-		</repository>
+ <distributionManagement>
+  <repository>
+   <id>releases</id>
+   <name>Internal Releases</name>
+   <url>http://192.168.0.6:8080/nexus/content/repositories/releases</url>
+  </repository>
 
-		<snapshotRepository>
-			<id>snapshots</id>
-			<name>Internal Snapshots</name>
-			<url>http://192.168.0.6:8080/nexus/content/repositories/snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
+  <snapshotRepository>
+   <id>snapshots</id>
+   <name>Internal Snapshots</name>
+   <url>http://192.168.0.6:8080/nexus/content/repositories/snapshots</url>
+  </snapshotRepository>
+ </distributionManagement>
 
   <!-- Various information, not used by the build -->
 
